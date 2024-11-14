@@ -3,8 +3,8 @@ import { Selector } from 'testcafe';
 export default class SelectorUtil {
 	constructor() {
 		// definition of selectors
-		this.usernameInput = Selector('input[placeholder="username"]');
-		this.passwordInput = Selector('input[placeholder="password"]');
+		this.usernameInput = Selector('input[placeholder="Username"]');
+		this.passwordInput = Selector('input[placeholder="Password"]');
 		this.loginButton = Selector('button[type="submit"]');
 		this.userDropdwon = Selector('.oxd-userdropdown-name');
 		this.logoutButton = Selector('a').withText('Logout');

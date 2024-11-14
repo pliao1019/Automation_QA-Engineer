@@ -26,7 +26,7 @@ This project is a TestCafe-based automation testing framework for the OrangeHRM 
 **1. Clone the repository:**
   ```bash
   git clone https://github.com/pliao1019/IDEKU_Automation_QA-Engineer.git
-  cd IDEKU_Automation_QA-Engineer.git
+  cd IDEKU_Automation_QA-Engineer
   ```
 **2. Install dependencies:**
   ```bash

@@ -1,0 +1,11 @@
+{
+  "name": "orangehrm-automation-test",
+  "version": "1.0.0",
+  "description": "Automation tests for OrangeHRM using TestCafe",
+  "scripts": {
+    "test": "testcafe chrome IDEKU_OrangeHRM_AutomationTest.js"
+  },
+  "dependencies": {
+    "testcafe": "^1.15.0"
+  }
+}

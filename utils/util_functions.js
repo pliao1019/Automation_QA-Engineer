@@ -40,7 +40,7 @@ export default class FunctionUtils {
             .click(selectorUtil.pimModule)
             .click(selectorUtil.addEmployeeButton);
 
-        // Step 3: Fill out Employee details
+        // Step 1: Fill out Employee details
         await t
             .typeText(selectorUtil.firstNameInput, 'John')
             .typeText(selectorUtil.lastNameInput, 'Doe')
@@ -48,7 +48,7 @@ export default class FunctionUtils {
             .pressKey('delete')
             .typeText(selectorUtil.employeeIdInput, '9999');
 
-        // Step 4: Upload Employee Image
+        // Step 2: Upload Employee Image
         await t
             .wait(3000)
             .setFilesToUpload(selectorUtil.fileInput, './employee-image.jpg')
@@ -56,14 +56,15 @@ export default class FunctionUtils {
             .expect(selectorUtil.fileInput.exists).ok('File input not found')
             .expect(selectorUtil.fileInput.value).contains('employee-image.jpg', 'Image was not uploaded successfully');
 
-        // Step 5: Save Employee
+        // Step 3: Save Employee
         await t
-            .click(selectorUtil.saveButton) // 20241111: 1.it taks some time for updating file at system, thus add wait(5000) below. 2.warning: it employee exist, is still able to proceed to next action. no problem ? 
+            .click(selectorUtil.saveButton)
             .wait(8000);
     }
 
     async SearchEmployee() {
         console.log('>> PIM - Search employee')
+        // Step 1: Fill out Employee name and search employee
         await t
             .click(selectorUtil.pimModule)
             .typeText(selectorUtil.employeeNameField, employeeName)
@@ -75,43 +76,36 @@ export default class FunctionUtils {
         console.log('>> PIM - Delete employee')
 
         await t
+            .wait(3000)
             .click(selectorUtil.employeeCheckbox)
             .click(selectorUtil.deleteButton)
             .click(selectorUtil.confirmDeleteButton)
             .expect(selectorUtil.noRecordFound.exists).notOk('Employee record still exists after delete');
-        /*
-         await t
-             .click(selectorUtil.pimModule)
-             .typeText(selectorUtil.employeeNameField, employeeName)
-             .click(selectorUtil.searchButton)
-             .wait(3000)
-             .expect(selectorUtil.noRecordFound.exists).notOk('Employee record still exists after delete');
-     */
     }
 
     async ApplyLeave() {
         console.log('>> Leave - Apply Leave')
         await t
-            .click(selectorUtil.leaveModule) // 點擊 "Leave" 模組
-            .click(selectorUtil.addLeaveButton); // 點擊 "Apply" 按鈕
+            .click(selectorUtil.leaveModule) // click "Leave" module
+            .click(selectorUtil.addLeaveButton); // click "Apply" button
 
-        // 選擇 Leave Type
+        // Leave Dropdown
         await t
             .click(selectorUtil.leaveTypeDropdown)
             .click(selectorUtil.leaveTypeOption);
 
-        // 輸入 From Date 和 To Date
+        // input From Date and To Date
         await t
             .typeText(selectorUtil.ApplyLeaveFromDateInput, '2024-12-12', { replace: true })
             .typeText(selectorUtil.ApplyLeaveToDateInput, '2024-12-12', { replace: true })
             .click(selectorUtil.ApplyLeaveToDateInput)
             .wait(3000);
 
-        // 選擇 Duration 為 "Specify Time"
+        // Duration Dropdown: "Specify Time"
         await t
             .hover(selectorUtil.durationDropdown)
             .click(selectorUtil.durationDropdown)
-            .wait(2000)
+            .wait(5000)
             .click(selectorUtil.specifyTimeOption)
             .click(selectorUtil.applyButton)
             .wait(5000);
@@ -130,7 +124,6 @@ export default class FunctionUtils {
             .pressKey('delete')
             .typeText(selectorUtil.MyLeaveToDateInput, '2024-12-12', { replace: true })
             .click(selectorUtil.searchButton)
-            //.expect(recordFound.exists).ok('No records found') // optionla 非必要,因為如果 employee 可被選擇/刪除,到表搜尋動作可找到 employee.
             .wait(2000);
     }
 

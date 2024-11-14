@@ -1,7 +1,6 @@
 
 import FunctionUtils from './utils/util_functions';
 const utils = new FunctionUtils();
-
 const baseURL = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 
 //Initialization

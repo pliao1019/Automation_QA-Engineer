@@ -6,6 +6,10 @@
     "test": "testcafe chrome IDEKU_OrangeHRM_AutomationTest.js"
   },
   "dependencies": {
-    "testcafe": "^1.15.0"
+    "testcafe": "^3.7.0"
+  }, 
+  "engines": {
+    "node": ">=22.11.0",
+    "npm": ">=10.9.0"
   }
 }

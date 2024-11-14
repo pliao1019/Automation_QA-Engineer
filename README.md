@@ -40,7 +40,7 @@ You can replace chrome with other browser options such as firefox or edge.
 
 **4. Expected result: PASSED**
 ![image](https://github.com/user-attachments/assets/2f58df47-e4e1-4aea-a7d5-2921ab0a328f)
-
+updated: Passed with Chrome 131.0.0.0 / Firefox 132.0 / Microsoft Edge 130.0.0.0
 
 **Features**
 

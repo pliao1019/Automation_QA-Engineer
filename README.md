@@ -10,7 +10,7 @@ This project is a TestCafe-based automation testing framework for the OrangeHRM 
 
 ### Project Structure
 ```plaintext
-├── IDEKU_OrangeHRM_AutomationTest.js  # Main test file for OrangeHRM automation
+├── OrangeHRM_AutomationTest.js  # Main test file for OrangeHRM automation
 ├── utils                              # Helper functions and selector utilities
 │   ├── util_functions.js              # Reusable functions for tests
 │   └── util_selector.js               # Page element selectors
@@ -25,8 +25,8 @@ This project is a TestCafe-based automation testing framework for the OrangeHRM 
 
 **1. Clone the repository:**
   ```bash
-  git clone https://github.com/pliao1019/IDEKU_Automation_QA-Engineer.git
-  cd IDEKU_Automation_QA-Engineer
+  git clone https://github.com/pliao1019/Automation_QA-Engineer.git
+  cd Automation_QA-Engineer
   ```
 **2. Install dependencies:**
   ```bash
@@ -34,7 +34,7 @@ This project is a TestCafe-based automation testing framework for the OrangeHRM 
   ```
 **3. Run the test by using this command:**
   ```bash
-  testcafe chrome -e IDEKU_OrangeHRM_AutomationTest.js
+  testcafe chrome -e OrangeHRM_AutomationTest.js
   ```
 You can replace chrome with other browser options such as firefox or edge.
 
@@ -50,7 +50,7 @@ Modular Structure: Utility files (utils/util_functions.js and utils/util_selecto
 
 **File Descriptions**
 
--  **IDEKU_OrangeHRM_AutomationTest.js**: Contains the main test cases for the OrangeHRM.
+-  **OrangeHRM_AutomationTest.js**: Contains the main test cases for the OrangeHRM.
 -  **utils/util_functions.js**: Contains functions to simplify and modularize the test code.
 -  **utils/util_selector.js**: Contains custom selectors for DOM elements used in the test.
 

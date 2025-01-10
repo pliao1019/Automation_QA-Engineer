@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Automation tests for OrangeHRM using TestCafe",
   "scripts": {
-    "test": "testcafe chrome IDEKU_OrangeHRM_AutomationTest.js"
+    "test": "testcafe chrome OrangeHRM_AutomationTest.js"
   },
   "dependencies": {
     "testcafe": "^3.7.0"

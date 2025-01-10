@@ -4,7 +4,7 @@ const utils = new FunctionUtils();
 const baseURL = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 
 //Initialization
-fixture`===== IDEKU QA Automation Assesment on OrangeHRM =====`
+fixture`===== QA Automation Assesment on OrangeHRM =====`
 
 	.beforeEach(async t => {
 		console.log('\n Go to Testing Website - https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
